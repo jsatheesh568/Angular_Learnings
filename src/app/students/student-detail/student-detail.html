@@ -1,0 +1,7 @@
+<section *ngIf="student">
+  <h2>{{ student.name }}</h2>
+  <p><strong>Age:</strong> {{ student.age }}</p>
+  <p><strong>Grade:</strong> {{ student.grade }}</p>
+  <p *ngIf="student.email"><strong>Email:</strong> {{ student.email }}</p>
+  <button routerLink="/students">Back</button>
+</section>

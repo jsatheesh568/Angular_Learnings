@@ -1,0 +1,4 @@
+.student-item { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid #eee; }
+.actions a { margin-right:8px; color:#2a2f45; text-decoration:none; }
+.actions button { background:#e05353; color:#fff; border:none; padding:6px 8px; border-radius:4px; cursor:pointer; }
+.meta { color:#666; font-size:12px; }

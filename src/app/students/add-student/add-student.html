@@ -1,0 +1,6 @@
+<form class="add-form" (ngSubmit)="submit()">
+  <input [(ngModel)]="name" name="name" placeholder="Name" required />
+  <input [(ngModel)]="age" name="age" type="number" placeholder="Age" required />
+  <input [(ngModel)]="grade" name="grade" placeholder="Grade" required />
+  <button type="submit">Add</button>
+</form>

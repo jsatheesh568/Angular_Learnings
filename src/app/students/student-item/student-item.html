@@ -1,0 +1,12 @@
+<div class="student-item">
+  <div>
+    <strong>{{ student.name }}</strong>
+    <div class="meta">
+      Age: {{ student.age }} • Grade: {{ student.grade }}
+    </div>
+  </div>
+  <div class="actions">
+    <a [routerLink]="['/students', student.id]">View</a>
+    <button (click)="remove.emit(student.id)">Delete</button>
+  </div>
+</div>
