@@ -111,10 +111,13 @@ This log will document my daily progress as I master Angular (v16+ / v17+ / v18 
 
 ### Binding Types:
 
-* `{{ }}` — **Interpolation**
-* `[prop]` — **Property Binding**
-* `(event)` — **Event Binding**
-* `[(ngModel)]` — **Two-way Binding**
+* `{{ }}` — **Interpolation**    - What: One-way text binding from component → template. Use for displaying values or simple expressions.
+Note: Interpolation always converts the result to string in the template.
+* `[prop]` — **Property Binding**  - Bind a DOM element or component property to a component expression (one-way from component → DOM). Use when you need to set DOM properties (not attributes) like disabled, src, value, or inputs of child components.
+* `(event)` — **Event Binding**  - Listen to DOM or component events and call a component method (DOM → component). Use event object with $event.
+* `[(ngModel)]` — **Two-way Binding** - Shorthand that combines property binding + event binding. Commonly used for form inputs to keep component property and input value synchronized.
+
+Important: ngModel is provided by FormsModule — import it into your module. 
 
 Enables reactive & dynamic UI updates.
 
