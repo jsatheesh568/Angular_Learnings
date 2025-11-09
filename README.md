@@ -57,3 +57,143 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# 📘 Angular Learning Journey — Day 1
+
+Welcome to my **Angular learning tracker**! 🚀
+This log will document my daily progress as I master Angular (v16+ / v17+ / v18 / Angular 20+ compatible concepts).
+
+---
+
+## 📂 Table of Contents
+
+* [Workspace & Project Structure](#workspace--project-structure)
+* [Components — Building Blocks](#components--building-blocks)
+* [Templates & Data Binding](#templates--data-binding)
+* [Directives](#directives)
+* [Pipes](#pipes)
+* [Lifecycle Hooks](#lifecycle-hooks)
+* [Dependency Injection & Services](#dependency-injection--services)
+* [Forms (Template-Driven)](#forms-template-driven)
+* [Summary](#summary)
+
+---
+
+## 🧭 Workspace & Project Structure
+
+> Angular workspace contains app source, configs, and environment files managed by Angular CLI.
+
+* `src/` — Application source code
+* `app/` — Components, modules, services
+* `angular.json` — Angular build & project config
+* `package.json` — Dependencies & scripts
+* Workspace ensures modular, scalable app organization.
+
+---
+
+## 🧱 Components — Building Blocks
+
+> Components control UI sections using HTML, TypeScript, and CSS.
+
+* Define reusable UI pieces
+* Contain:
+
+  * **HTML** (template)
+  * **TS** (logic)
+  * **CSS/SCSS** (styling)
+* Decorated with `@Component()`
+* Declared in modules, rendered in templates
+
+---
+
+## 🖋 Templates & Data Binding
+
+> Connects UI and component logic.
+
+### Binding Types:
+
+* `{{ }}` — **Interpolation**    - What: One-way text binding from component → template. Use for displaying values or simple expressions.
+Note: Interpolation always converts the result to string in the template.
+* `[prop]` — **Property Binding**  - Bind a DOM element or component property to a component expression (one-way from component → DOM). Use when you need to set DOM properties (not attributes) like disabled, src, value, or inputs of child components.
+* `(event)` — **Event Binding**  - Listen to DOM or component events and call a component method (DOM → component). Use event object with $event.
+* `[(ngModel)]` — **Two-way Binding** - Shorthand that combines property binding + event binding. Commonly used for form inputs to keep component property and input value synchronized.
+
+Important: ngModel is provided by FormsModule — import it into your module. 
+
+Enables reactive & dynamic UI updates.
+
+---
+
+## 🎯 Directives
+
+> Extend HTML behavior or change DOM structure.
+
+### Types:
+
+* **Structural:** `*ngIf`, `*ngFor`, `*ngSwitch`
+* **Attribute:** `ngClass`, `ngStyle`
+
+Used to manipulate DOM and add logic to elements.
+
+---
+
+## 🔄 Pipes
+
+> Transform data inside templates.
+
+Examples: `date`, `uppercase`, `currency`, `json`
+
+Custom pipes created using `@Pipe()`
+
+```html
+{{ value | uppercase }}
+```
+
+---
+
+## ♻️ Lifecycle Hooks
+
+> Tap into component life cycle.
+
+Common hooks:
+
+* `ngOnInit()` — after initialization
+* `ngOnChanges()` — on input change
+* `ngOnDestroy()` — cleanup
+
+Useful for subscriptions, initialization logic, cleanup.
+
+---
+
+## 💉 Dependency Injection & Services
+
+> Share logic across components.
+
+* Services handle business logic, API calls, shared functions
+* Provided via Angular DI system
+* Promotes reusability & clean architecture
+
+---
+
+## 📝 Forms (Template-Driven)
+
+> Form handling using directives and bindings in HTML.
+
+* Uses `[(ngModel)]`
+* Easy validation (`required`, `minlength`)
+* Suitable for simple to medium forms
+
+---
+
+## ✅ Day 1 Summary
+
+Learned the core Angular building blocks:
+
+✔ Workspace & Angular CLI
+✔ Components & Templates
+✔ Data Binding & Directives
+✔ Pipes, Lifecycle Hooks
+✔ Dependency Injection
+✔ Template-Driven Forms
+
+**Strong foundation built 💪 — ready for advanced topics next!**
+
