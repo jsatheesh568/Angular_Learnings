@@ -1,13 +1,14 @@
-<section>
-  <h2>Students</h2>
+<!-- two-way binding on search input -->
+<input type="text" placeholder="Search by name/grade/email"
+       [(ngModel)]="searchTerm" (ngModelChange)="onSearch($event)" />
 
-  <app-add-student></app-add-student>
+<!-- async pipe + *ngIf + *ngFor -->
+<div *ngIf="filtered$ | async as students">
+  <p *ngIf="students.length === 0" class="empty">No students found.</p>
 
-  <p *ngIf="(students$ | async)?.length === 0">No students found.</p>
-
-  <ul class="student-list">
-    <li *ngFor="let s of students$ | async">
-      <app-student-item [student]="s" (remove)="remove($event)"></app-student-item>
-    </li>
-  </ul>
-</section>
+  <app-student-item
+  *ngFor="let s of students"
+  [student]="s"
+  (removed)="remove($event)">      <!-- changed from (remove) to (removed) -->
+</app-student-item>
+</div>

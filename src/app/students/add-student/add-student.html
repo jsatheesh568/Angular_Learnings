@@ -2,5 +2,5 @@
   <input [(ngModel)]="name" name="name" placeholder="Name" required />
   <input [(ngModel)]="age" name="age" type="number" placeholder="Age" required />
   <input [(ngModel)]="grade" name="grade" placeholder="Grade" required />
-  <button type="submit">Add</button>
+<button type="submit" [disabled]="!name || !age || !grade">Add</button>
 </form>

@@ -1,12 +1,17 @@
-<div class="student-item">
-  <div>
-    <strong>{{ student.name }}</strong>
-    <div class="meta">
-      Age: {{ student.age }} • Grade: {{ student.grade }}
+<app-card>
+  <div class="student-item" appHoverHighlight="#f2f7ff">
+    <div>
+      <strong>{{ student.name }}</strong>
+      <div class="meta"
+           [class.senior]="student.age >= 18"
+           [class.junior]="student.age < 18">
+        Age: {{ student.age }} • Grade: {{ student.grade | gradeLabel }}
+      </div>
+    </div>
+
+    <div class="actions">
+      <a [routerLink]="['/students', student.id]">View</a>
+      <button (click)="onDelete()">Delete</button>
     </div>
   </div>
-  <div class="actions">
-    <a [routerLink]="['/students', student.id]">View</a>
-    <button (click)="remove.emit(student.id)">Delete</button>
-  </div>
-</div>
+</app-card>
